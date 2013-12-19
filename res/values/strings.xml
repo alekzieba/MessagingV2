@@ -9,5 +9,7 @@
     <string name="login">Log In</string>
     <string name="account">Account</string>
     <string name="loggingin">Logging in&#8230;</string>
+    <string name="copy">Copy</string>
+    <string name="delete">Delete</string>
 
 </resources>

@@ -9,7 +9,7 @@
         android:layout_alignParentRight="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:paddingLeft="5dp"
         android:textColor="#000">
     </TextView>

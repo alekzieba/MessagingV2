@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -39,13 +40,14 @@ public class LoginActivity extends Activity {
 		
 		EditText accountText = (EditText) findViewById(R.id.username);
 		EditText passwordText = (EditText) findViewById(R.id.password);
+		Button loginButton = (Button) findViewById(R.id.login_button);
 		
 	    username = accountText.getText().toString();
 	    
 	    
 	    accountText.setFocusable(false);
 	    passwordText.setFocusable(false);
-	    
+	    loginButton.setFocusable(false);
 	    
 	    
 	    
@@ -66,4 +68,8 @@ public class LoginActivity extends Activity {
 		startActivity(intent);
 	    finish();
 	}
+	
+	
+	
+	
 }
