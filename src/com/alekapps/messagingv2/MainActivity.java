@@ -11,6 +11,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -20,6 +21,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -28,6 +30,8 @@ import android.widget.TextView;
 import com.alekapps.messagingv2.Item;
 
 public class MainActivity extends Activity {
+	
+	LinearLayout ll;
 	
 	ArrayList<Item> items = new ArrayList<Item>();
 	Item message;
@@ -53,6 +57,11 @@ public class MainActivity extends Activity {
 		
 		Intent intent = getIntent();
 		String name = intent.getStringExtra(LoginActivity.ACCOUNT_NAME);
+		int color = intent.getIntExtra(LoginActivity.BACKGROUND_COLOR, 0);
+		
+		ll = (LinearLayout) findViewById(R.id.main);
+		
+		ll.setBackgroundColor(color);
 		
 		setTitle(name);
 	}
@@ -88,9 +97,33 @@ public class MainActivity extends Activity {
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+	    MenuInflater inflater = getMenuInflater();
+	    inflater.inflate(R.menu.color_menu, menu);
+	    return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle item selection
+	    switch (item.getItemId()) {
+	        case R.id.red:
+	            ll.setBackgroundColor(Color.RED);
+	            return true;
+	        case R.id.green:
+	        	ll.setBackgroundColor(Color.GREEN);
+	            return true;
+	        case R.id.yellow:
+	        	ll.setBackgroundColor(Color.YELLOW);
+	            return true;
+	        case R.id.gray:
+	        	ll.setBackgroundColor(Color.GRAY);
+	            return true;
+	        case R.id.white:
+	        	ll.setBackgroundColor(Color.WHITE);
+	            return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
 	}
 	
 	

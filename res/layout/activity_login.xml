@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#9C0"
-    >
-
+    android:id="@+id/login" >
     <EditText
         android:id="@+id/username"
         android:fontFamily="sans-serif-condensed"

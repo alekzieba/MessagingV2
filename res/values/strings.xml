@@ -8,8 +8,14 @@
     <string name="enter_message">Enter a Message!</string>
     <string name="login">Log In</string>
     <string name="account">Account</string>
-    <string name="loggingin">Logging in&#8230;</string>
+    <string name="loggingin">Logging in</string>
     <string name="copy">Copy</string>
     <string name="delete">Delete</string>
+    <string name="color">Color</string>
+    <string name="green">Green</string>
+    <string name="red">Red</string>
+    <string name="yellow">Yellow</string>
+    <string name="gray">Gray</string>
+    <string name="white">White</string>
 
 </resources>

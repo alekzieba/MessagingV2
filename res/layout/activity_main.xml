@@ -10,7 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#9C0"
     
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity"
+    android:id="@+id/main" >
 
     <ListView
         android:id="@+id/list"
