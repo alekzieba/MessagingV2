@@ -86,7 +86,7 @@ public class LoginActivity extends Activity {
 	    
 	    accountText.setFocusable(false);
 	    passwordText.setFocusable(false);
-	    loginButton.setFocusable(false);
+	    loginButton.setEnabled(false);
 	    
 	    
 	    
